@@ -24,25 +24,23 @@ class Vehicle(AirSimClient):
         self.collision = super().getCollisionInfo()
         self.rollPitchYaw = super().getRollPitchYaw()
     
-    def faster(self, accelerate, duration):        
-        start = 0.0  
+    def accelerate(self, acc, duration):        
+        start = 0.0 
+        startVelocity = self.velocity 
         if duration < 0.1:
-            accelerate = accelerate*(duration/0.1)
+            acc = acc*(duration/0.1)
             duration = 0.1
         while start<duration:
             if self.stateEmergencyChange:
                 return
             time.sleep(0.1)
-            vx=self.velocity.x_val+accelerate[0]*0.1
-            vy=self.velocity.y_val+accelerate[1]*0.1
-            vz=self.velocity.z_val+accelerate[2]*0.1
-            super().moveByVelocity(vx,vy,vz, Vehicle.VelocityDuration)
-            self.updateState()
-            # print('the speed is: ',self.velocity.x_val, ' ',vehicle.velocity.y_val,' ', vehicle.velocity.z_val)
             start+=0.1
-
-
-
+            vx=startVelocity.x_val+acc[0]*start
+            vy=startVelocity.y_val+acc[1]*start
+            vz=startVelocity.z_val+acc[2]*start
+            super().moveByVelocity(vx,vy,vz, Vehicle.VelocityDuration)
+            # print('the speed is: ',self.velocity.x_val, ' ',vehicle.velocity.y_val,' ', vehicle.velocity.z_val)
+            
 
 
 if __name__ == '__main__':
