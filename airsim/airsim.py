@@ -26,6 +26,7 @@ class Vehicle(AirSimClient):
     
     def accelerate(self, acc, duration):        
         start = 0.0 
+        self.updateState()
         startVelocity = self.velocity 
         if duration < 0.1:
             acc = acc*(duration/0.1)
