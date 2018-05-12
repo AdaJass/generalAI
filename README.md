@@ -3,9 +3,9 @@
 ## Summerize ##
 Intelligent is base on a setted goal. Our goal is to make the most of our life experience. Then there are bulk of definitions, that define what kind of things lead to what kind of emotion. like or dislike this emotion was setted, thus our life was setted. 
 
-GeneralAI is a project that tries to make a general AI base on this philosophy. It will present as a vehicle, which comes from <a href="https://github.com/microsoft/airsim">Micrsoft open source project *AirSim*</a>. I will add nature language support to make it more intelligent.
+GeneralAI is a project that tries to make a general AI base on this philosophy. GeneralAI will  live in the virtul world <a href="http://wuxia.qq.com/main.shtml">The Moonlight Blade</a>. The moonlight blade is a pc game create by tencent. The world is vast and complicated, player has lots of thing to learn and to do. The scenery is close to reality, I saw somebody said he had masturbated with the character of the game. When generalAI learn to control a character as a human does, and nobody find out it is a robot, we succeed. There won't be a code as the type: if condition, do action, all thing, all action, gerneralAI gather from learning.
 
-This is a long way to go. I gona seperate the final goal into several small part. The first goal is to make this AI knows auto trace object. It means that the AI will be setted to auto trace object. This task seems easy to complete, but I will make it further. 
+This is a long way to go. I gona seperate the final goal into several small part. The first goal is to make this AI knows auto tracing object. It means that the AI will be setted to auto trace object. This task seems easy to complete, but I will make it further. 
 
 ## Tracing Object ##
 Just trace an object is easy, but i need it to auto trace all objects. AI will trace the object base on interest, the interest will be predefined. basicaly, new things, big things, strange thing first. To recognize new thing or *old thing*, it need to record object. *Recording Object* is the core of tracing object, it will help AI recognize and reconstruct world. 
@@ -30,6 +30,7 @@ Despite linguistic definition on comprehension, I give the definition here by in
 
 
 ## Basic Ability ##
+Basic Abilitity model will be put at the first to do among coding. it is rock-bottom, important, large and complicatied. some of the BA are: classification, action serise and state series definition. classification will basic on some more basic ability like: find two things' similarity, sense of beauty,  for more detail please refer to the doc on schedule.
 1. C net
 2. S net
 3. G net
